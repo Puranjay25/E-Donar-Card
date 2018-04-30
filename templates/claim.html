@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Claim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+</style>
+<body class="w3-light-grey">
+<form action="{{url_for('claim')}}">
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-large">
+  <a href="/homepage" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i>Dashboard</a>
+  <a href="/claim" class="w3-bar-item w3-button w3-mobile">Claim</a>
+  <a href="/view" class="w3-bar-item w3-button w3-mobile">View Donor Card</a>
+  <a href="/" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">LogOut</a>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content" style="max-width:1500px;">
+  <img class="w3-image" src="static/image/10-best-government-hospitals-in-mumbai (1).jpg" alt="The Hotel" style="min-width:1000px" width="150" height="80">
+  <div class="w3-display-left w3-padding w3-col l6 m8">
+    <div class="w3-container w3-red">
+      <h2><i class="fa fa-bed w3-margin-right"></i>Claim Blood</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> ID</label>
+            <input class="w3-input w3-border" type="text" name="name" required>
+          </div>
+         
+        </div>
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-male"></i> Blood Group</label>
+            <input class="w3-input w3-border" type="varchar" value="A+" name="bg" >
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-child"></i> Number of Units</label>
+          <input class="w3-input w3-border" type="number" value="1" name="units" min="1" max="6">
+          </div>
+        </div>
+        <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Claim</button>
+    </div>
+  </div>
+</header>
+
+</body>
+</html>
+

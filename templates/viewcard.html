@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donor Card</title>
+</head>
+<body>
+	<form action="{{url_for('view')}}">
+	</br></br></br></br></br></br></br></br></br></br></br></br></br>	
+	<div class="container" style="text-align: center; vertical-align:center; width: 300px;left : 40%; position:absolute;border: 5px solid green;padding: 35px;">
+  	<h1>Donor Card</h1>
+      {% for d in details %}
+        <h2>Id:{{d[0]}}</h2>
+        <h2>Username:{{d[1]}}</h2>
+        <h2>Email:{{d[2]}}</h2>
+        <h2>Contact:{{d[3]}}</h2>
+        <h2>Age:{{d[4]}}</h2>
+       	<h2>Balance:{{d[5]}}</h2></br></br>
+        
+      {% endfor %}
+
+	</div>
+	</form>
+
+</body>
+</html>

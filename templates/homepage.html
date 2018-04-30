@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>DashBoard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    background-image: url('../static/image/pexels-photo-751373.jpeg')
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/static/image/BLOOD3.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+<body>
+<div id="particles-js"></div>
+<form action="{{url_for('homepage')}}" method="post">
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="/requests" class="w3-button w3-block w3-black"><h3>Request</h3></a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/claim" class="w3-button w3-block w3-black"><h3>Claim</h3></a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/view" class="w3-button w3-block w3-black"><h3>View Donor Card</h3></a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/logout" class="w3-button w3-block w3-black"><h3>Logout</h3></a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Contextual Classes</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><h2>Name</h2></th>
+        <th><h2>Blood Group</h2></th>
+        <th><h2>Number of Unit</h2></th>
+        <th><h2>Donate</h2></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for n in name %}
+      <tr class="danger">
+        <td><h3>{{n[1]}}</h3></td>
+        <td><h3>{{n[2]}}</h3></td>
+        <td><h3>{{n[3]}}</h3></td>
+        <td><a href="/donarinfo"><input id="{{n[0]}}" type="button" class="btn btn-danger" value="Donate"></a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+<form>
+</body>
+</html>

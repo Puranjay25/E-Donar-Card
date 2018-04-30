@@ -1,0 +1,76 @@
+body{
+  margin:100;
+  padding: 20 ;
+  background-color:#8B0000;
+  background-size: cover;
+  font-family: sans-serif;
+  color: white;
+  background-attachment:fixed;
+  
+  
+}
+table, th, td {
+    border: 1px solid black;
+}
+
+}
+ul{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+  
+
+}
+li{
+  float:left;
+  width: 200px;
+  height: 30px;
+  background-color: black;
+  opacity: .8;
+  line-height: 30px;
+  text-align: center;
+  font-size: 15px;
+  margin: 30px;
+  border-radius:20px;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+ul li a:hover{
+  background-color: green;
+  cursor: pointer;
+}
+
+.Donar{
+	margin:0;
+	padding:0;
+	font-size:20px;
+	text-align:center;
+	border-bottom:30px;
+	
+}
+.Donar-box{
+  width: 320px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffff;
+  top: 30%;
+  left:40%;
+  position:absolute;
+  transform: translate(0%,10%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius:100px;
+}
+.Donar-box input[type="text"]
+{
+  border:none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 30px;
+  color:#fff;
+  font-size:16px;
+}
